@@ -1,0 +1,46 @@
+<style>
+	.about {
+		background-color: #5cb85c;
+		color: #fff;
+		font-size: 2em;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.mensagem {
+		font-size: 2em;
+	}
+
+	.erro {
+		color: #f00;
+	}
+
+	.sucesso {
+		color: #0f0;
+	}
+</style>
+<div class="container" ng-controller="listarController as vm">
+	<div class="about">
+		<div>Eu: {{nome}}</div>
+		<div>Saldo: R$ {{saldo}}</div>
+	</div>
+	<h2>Lista de Contas</h2>
+	<table class="table table-striped">
+		<tr>
+			<td>Nome</td>
+			<td>CPF</td>
+			<td>Conta</td>
+			<td>Valor a ser transferido</td>
+			<td></td>
+		</tr>
+		<tr ng-repeat="item in vm.listaClientes" ng-if="$index > 0">
+			<td>{{item.cliente.nome}}</td>
+			<td>{{item.cliente.cpf}}</td>
+			<td>{{item.id}}</td>
+			<td><input type="text" class="form-control" ng-model="valor_$index"></td>
+			<td><button class="btn btn-success" ng-click="transferirValor(meu_id, item.id, valor_$index)">Transferir</button></td>
+		</tr>
+	</table>
+	<div class="mensagem {{class}}">{{mensagem}}</div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "name": "bluebank",
+  "version": "1.0.0",
+  "description": "A great bank",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alissonzampietro/bluebank.git"
+  },
+  "author": "Alisson Zampietro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alissonzampietro/bluebank/issues"
+  },
+  "homepage": "https://github.com/alissonzampietro/bluebank#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mysql": "^2.13.0",
+    "mysql2": "^1.2.0",
+    "sequelize": "^3.30.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}

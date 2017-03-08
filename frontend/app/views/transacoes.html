@@ -1,0 +1,27 @@
+<style>
+	.about {
+		background-color: #5cb85c;
+		color: #fff;
+		font-size: 2em;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+</style>
+<div class="container" ng-controller="transacoesController as vm">
+	<h2>Lista de Transações</h2>
+	<table class="table table-striped">
+		<tr>
+			<td>Conta Remetente</td>
+			<td>Conta Destinatária</td>
+			<td>Valor Transferido</td>
+			<td>Data Transferência</td>
+		</tr>
+		<tr ng-repeat="item in vm.listaTransacoes" ng-if="$index > 0">
+			<td>{{item.fk_conta_remetente}}</td>
+			<td>{{item.fk_conta_destinatario}}</td>
+			<td>{{item.valor}}</td>
+			<td>{{item.createdAt | date:'dd/MM/yyyy'}}</td>
+		</tr>
+	</table>
+</div>

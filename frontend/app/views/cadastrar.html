@@ -1,0 +1,18 @@
+<div class="container" ng-controller="CadastrarController as aluno">
+	<form ng-submit="cadastrar()">
+		<p>
+			<label>Nome</label>
+			<input type="text" ng-model="aluno.nome" required/>
+		</p>
+		<p>
+			<label>E_mail</label>
+			<input type="email" ng-model="aluno.email" required/>
+		</p>
+		<p>
+			<label>Telefone</label>
+			<input type="text" ng-model="aluno.telefone" required/>
+		</p>
+		<button type="submit" class="btn btn-success" />Cadastrar</button>
+
+	</form>
+</div>
